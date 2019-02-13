@@ -8,8 +8,6 @@ target 'DrinksOnMe' do
   # Pods for DrinksOnMe
   pod 'Moya'
   pod 'SnapKit'
-  pod 'RxSwift'
-  pod 'RxCocoa'
 
   target 'DrinksOnMeTests' do
     inherit! :search_paths
