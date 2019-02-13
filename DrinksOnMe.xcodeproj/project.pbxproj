@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F40DB539221395A9004E4E82 /* InvitesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DB538221395A9004E4E82 /* InvitesListViewController.swift */; };
+		F40DB53B221395CA004E4E82 /* InvitesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DB53A221395CA004E4E82 /* InvitesListViewModel.swift */; };
+		F40DB53F2213960C004E4E82 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DB53E2213960C004E4E82 /* User.swift */; };
+		F40DB54122139623004E4E82 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DB54022139623004E4E82 /* Coordinate.swift */; };
+		F40DB54322139784004E4E82 /* InviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DB54222139784004E4E82 /* InviteTableViewCell.swift */; };
+		F40DB54522139E81004E4E82 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F40DB54422139E81004E4E82 /* Localizable.strings */; };
+		F40DB54722139EAE004E4E82 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DB54622139EAE004E4E82 /* Language.swift */; };
+		F40DB54922139F5A004E4E82 /* InviteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DB54822139F5A004E4E82 /* InviteDetailsViewController.swift */; };
 		F4B3579A2213041700409014 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B357992213041700409014 /* AppDelegate.swift */; };
-		F4B3579C2213041700409014 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3579B2213041700409014 /* ViewController.swift */; };
-		F4B3579F2213041700409014 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B3579D2213041700409014 /* Main.storyboard */; };
+		F4B3579F2213041700409014 /* InvitesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B3579D2213041700409014 /* InvitesList.storyboard */; };
 		F4B357A12213041900409014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B357A02213041900409014 /* Assets.xcassets */; };
 		F4B357A42213041900409014 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B357A22213041900409014 /* LaunchScreen.storyboard */; };
 		F4B357AF2213041900409014 /* DrinksOnMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B357AE2213041900409014 /* DrinksOnMeTests.swift */; };
@@ -26,10 +33,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F40DB538221395A9004E4E82 /* InvitesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitesListViewController.swift; sourceTree = "<group>"; };
+		F40DB53A221395CA004E4E82 /* InvitesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitesListViewModel.swift; sourceTree = "<group>"; };
+		F40DB53E2213960C004E4E82 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F40DB54022139623004E4E82 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		F40DB54222139784004E4E82 /* InviteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteTableViewCell.swift; sourceTree = "<group>"; };
+		F40DB54422139E81004E4E82 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F40DB54622139EAE004E4E82 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		F40DB54822139F5A004E4E82 /* InviteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteDetailsViewController.swift; sourceTree = "<group>"; };
 		F4B357962213041700409014 /* DrinksOnMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinksOnMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B357992213041700409014 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4B3579B2213041700409014 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F4B3579E2213041700409014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4B3579E2213041700409014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/InvitesList.storyboard; sourceTree = "<group>"; };
 		F4B357A02213041900409014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4B357A32213041900409014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4B357A52213041900409014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +70,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F40DB5342213957A004E4E82 /* InvitesList */ = {
+			isa = PBXGroup;
+			children = (
+				F40DB53722139590004E4E82 /* ViewModels */,
+				F40DB5362213958C004E4E82 /* Views */,
+				F40DB53522139588004E4E82 /* Controllers */,
+			);
+			path = InvitesList;
+			sourceTree = "<group>";
+		};
+		F40DB53522139588004E4E82 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F40DB538221395A9004E4E82 /* InvitesListViewController.swift */,
+				F40DB54822139F5A004E4E82 /* InviteDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F40DB5362213958C004E4E82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4B3579D2213041700409014 /* InvitesList.storyboard */,
+				F40DB54222139784004E4E82 /* InviteTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F40DB53722139590004E4E82 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F40DB53A221395CA004E4E82 /* InvitesListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F40DB53C221395E2004E4E82 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F40DB5342213957A004E4E82 /* InvitesList */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F40DB53D221395FC004E4E82 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F40DB53E2213960C004E4E82 /* User.swift */,
+				F40DB54022139623004E4E82 /* Coordinate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F4B3578D2213041700409014 = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +144,7 @@
 		F4B357982213041700409014 /* DrinksOnMe */ = {
 			isa = PBXGroup;
 			children = (
-				F4B357992213041700409014 /* AppDelegate.swift */,
-				F4B3579B2213041700409014 /* ViewController.swift */,
-				F4B3579D2213041700409014 /* Main.storyboard */,
-				F4B357A02213041900409014 /* Assets.xcassets */,
-				F4B357A22213041900409014 /* LaunchScreen.storyboard */,
+				F4B357B92213042100409014 /* App */,
 				F4B357A52213041900409014 /* Info.plist */,
 			);
 			path = DrinksOnMe;
@@ -94,6 +157,28 @@
 				F4B357B02213041900409014 /* Info.plist */,
 			);
 			path = DrinksOnMeTests;
+			sourceTree = "<group>";
+		};
+		F4B357B92213042100409014 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F4B357BA2213042600409014 /* Common */,
+				F40DB53C221395E2004E4E82 /* Features */,
+				F40DB53D221395FC004E4E82 /* Models */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F4B357BA2213042600409014 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F4B357A02213041900409014 /* Assets.xcassets */,
+				F4B357992213041700409014 /* AppDelegate.swift */,
+				F4B357A22213041900409014 /* LaunchScreen.storyboard */,
+				F40DB54422139E81004E4E82 /* Localizable.strings */,
+				F40DB54622139EAE004E4E82 /* Language.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B357A42213041900409014 /* LaunchScreen.storyboard in Resources */,
+				F40DB54522139E81004E4E82 /* Localizable.strings in Resources */,
 				F4B357A12213041900409014 /* Assets.xcassets in Resources */,
-				F4B3579F2213041700409014 /* Main.storyboard in Resources */,
+				F4B3579F2213041700409014 /* InvitesList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4B3579C2213041700409014 /* ViewController.swift in Sources */,
+				F40DB54922139F5A004E4E82 /* InviteDetailsViewController.swift in Sources */,
+				F40DB53F2213960C004E4E82 /* User.swift in Sources */,
+				F40DB53B221395CA004E4E82 /* InvitesListViewModel.swift in Sources */,
 				F4B3579A2213041700409014 /* AppDelegate.swift in Sources */,
+				F40DB54722139EAE004E4E82 /* Language.swift in Sources */,
+				F40DB539221395A9004E4E82 /* InvitesListViewController.swift in Sources */,
+				F40DB54322139784004E4E82 /* InviteTableViewCell.swift in Sources */,
+				F40DB54122139623004E4E82 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,12 +313,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F4B3579D2213041700409014 /* Main.storyboard */ = {
+		F4B3579D2213041700409014 /* InvitesList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F4B3579E2213041700409014 /* Base */,
 			);
-			name = Main.storyboard;
+			name = InvitesList.storyboard;
 			sourceTree = "<group>";
 		};
 		F4B357A22213041900409014 /* LaunchScreen.storyboard */ = {
