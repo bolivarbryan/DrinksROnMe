@@ -7,9 +7,8 @@ protocol InvitesListViewModelDelegate {
 }
 
 class InvitesListViewModel {
-
+    static let partyCoordinates: Coordinate = Coordinate(latitude: 53.339428, longitude:  -6.257664)
     private let maxDistanceInKilometers: Double = 100
-    private let currentRegion: Coordinate = Coordinate(latitude: 53.339428, longitude:  -6.257664)
     private var invitedUsers: [User] = []
     private var notInvitedUsers: [User] = []
     var delegate: InvitesListViewModelDelegate? = nil
@@ -17,7 +16,7 @@ class InvitesListViewModel {
     var users: [User] = [] {
         didSet {
             invitedUsers = users.filter({ user in
-                let distanceInMeters = self.distance(from: currentRegion, to: user.userLocation)
+                let distanceInMeters = self.distance(from: InvitesListViewModel.partyCoordinates, to: user.userLocation)
                 return distanceInMeters/1000 < maxDistanceInKilometers
             })
             .sorted()

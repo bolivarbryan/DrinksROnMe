@@ -34,6 +34,7 @@ class InviteDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        centerMapInCoordinates()
     }
 
     func configureUI() {
@@ -60,6 +61,35 @@ class InviteDetailsViewController: UIViewController {
             $0.height.equalTo(24)
         }
         coordinatesLabel.text = user.compactedCoordinate
+    }
+
+    func centerMapInCoordinates() {
+        let partyCoordinates = InvitesListViewModel.partyCoordinates
+        let location = CLLocation(latitude: partyCoordinates.latitude, longitude: partyCoordinates.longitude)
+        let userLocation = CLLocation(latitude: user.lat, longitude: user.long)
+        
+        let partyAnnotation = MyAnnotation(title: "Intercom", coordinate: location.coordinate, subtitle: "")
+        let userAnnotation = MyAnnotation(title: user.name, coordinate: userLocation.coordinate, subtitle: "")
+
+        mapView.addAnnotation(partyAnnotation)
+        mapView.addAnnotation(userAnnotation)
+        mapView.showAnnotations([partyAnnotation, userAnnotation], animated: true)
+    }
+
+}
+
+class MyAnnotation: NSObject,MKAnnotation {
+
+    var title : String?
+    var subTit : String?
+    var coordinate : CLLocationCoordinate2D
+
+    init(title:String,coordinate : CLLocationCoordinate2D,subtitle:String){
+
+        self.title = title;
+        self.coordinate = coordinate;
+        self.subTit = subtitle;
+
     }
 
 }
