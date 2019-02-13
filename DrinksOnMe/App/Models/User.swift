@@ -1,31 +1,44 @@
 import Foundation
 
-class User: Codable, Equatable {
+struct User: Codable {
 
-    static func == (lhs: User, rhs: User) -> Bool {
-        return lhs.userID == rhs.userID
-    }
-
-
-    let latitude: String
     let userID: Int
     let name: String
-    let longitude: String
+    var latitude: String
+    var longitude: String
 
+    /// Setting 0.0 as default value in case latitude or longitude are over or below the valid range
     var lat: Double {
-        return Double(latitude) ?? 0
+        guard
+            let value = Double(latitude),
+            value >= -90,
+            value <= 90
+            else { return 0 }
+        return value
     }
 
     var long: Double {
-        return Double(longitude) ?? 0
+        guard
+            let value = Double(longitude),
+            value >= -180,
+            value <= 180
+            else {
+                assertionFailure("Invalid input for new value")
+                return 0
+        }
+        return value
     }
 
     var detailedName: String {
-        return "\(name)  \(userID)"
+        return "(\(userID)) \(name)"
     }
 
     var compactedCoordinate: String {
         return "(\(latitude), \(longitude))"
+    }
+
+    var userLocation: Coordinate {
+        return Coordinate(latitude: lat, longitude: long)
     }
 
     enum CodingKeys: String, CodingKey {
@@ -33,4 +46,24 @@ class User: Codable, Equatable {
         case userID = "user_id"
         case name, longitude
     }
+
+    init(userID: Int, name: String, latitude: String, longitude: String) {
+        self.userID = userID
+        self.name = name
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+}
+
+extension User: Equatable {
+    static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.userID == rhs.userID
+    }
+}
+
+extension User: Comparable {
+    static func < (lhs: User, rhs: User) -> Bool {
+        return lhs.userID <= rhs.userID
+    }
+
 }

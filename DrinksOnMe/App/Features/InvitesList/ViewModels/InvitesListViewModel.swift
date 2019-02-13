@@ -1,4 +1,5 @@
 import Foundation
+import CoreLocation
 
 protocol InvitesListViewModelDelegate {
     func usersDidFetch()
@@ -6,45 +7,26 @@ protocol InvitesListViewModelDelegate {
 
 class InvitesListViewModel {
 
+    private let maxDistanceInKilometers: Double = 100
+    private let currentRegion: Coordinate = Coordinate(latitude: 53.339428, longitude:  -6.257664)
+    private var invitedUsers: [User] = []
+    private var notInvitedUsers: [User] = []
+    var delegate: InvitesListViewModelDelegate? = nil
+
     var users: [User] = [] {
         didSet {
-            invitedUsers = users.filter({
-                return self.haversineDinstance(la1: currentRegion.latitude,
-                                               lo1: currentRegion.longitude,
-                                               la2: $0.lat,
-                                               lo2: $0.long)/1000 < 100
+            invitedUsers = users.filter({ user in
+                let distanceInMeters = self.distance(from: currentRegion, to: user.userLocation)
+                return distanceInMeters/1000 < maxDistanceInKilometers
             })
-                .sorted { (user1, user2) -> Bool in
-                    user1.userID < user2.userID
-            }
+            .sorted()
 
             notInvitedUsers = users.filter { !invitedUsers.contains($0) }
-
         }
     }
-
-    let currentRegion: Coordinate = Coordinate(latitude: 53.339428,
-                                               longitude:  -6.257664)
-
-    fileprivate var invitedUsers: [User] = []
-    fileprivate var notInvitedUsers: [User] = []
 
     var groupedUsers: [[User]] {
         return [invitedUsers, notInvitedUsers]
-    }
-
-    var delegate: InvitesListViewModelDelegate? = nil
-
-    func listUsersInRegion(place: Coordinate) -> [User] {
-        return users.filter({
-            return self.haversineDinstance(la1: place.latitude,
-                                           lo1: place.longitude,
-                                           la2: $0.lat,
-                                           lo2: $0.long)/1000 < 100
-        })
-            .sorted { (user1, user2) -> Bool in
-                user1.userID < user2.userID
-        }
     }
 
     func fetchUsers() {
@@ -73,25 +55,10 @@ class InvitesListViewModel {
             .resume()
     }
 
-    func haversineDinstance(la1: Double, lo1: Double, la2: Double, lo2: Double, radius: Double = 6367444.7) -> Double {
-
-        let haversin = { (angle: Double) -> Double in
-            return (1 - cos(angle))/2
-        }
-
-        let ahaversin = { (angle: Double) -> Double in
-            return 2*asin(sqrt(angle))
-        }
-
-        let dToR = { (angle: Double) -> Double in
-            return (angle / 360) * 2 * .pi
-        }
-
-        let lat1 = dToR(la1)
-        let lon1 = dToR(lo1)
-        let lat2 = dToR(la2)
-        let lon2 = dToR(lo2)
-
-        return radius * ahaversin(haversin(lat2 - lat1) + cos(lat1) * cos(lat2) * haversin(lon2 - lon1))/2
+    func distance(from coordinate1: Coordinate, to coordinate2: Coordinate) -> Double {
+        let location1 = CLLocation(latitude: coordinate1.latitude, longitude: coordinate1.longitude)
+        let location2 = CLLocation(latitude: coordinate2.latitude, longitude: coordinate2.longitude)
+        print(location1.coordinate, location2.coordinate, location1.distance(from: location2))
+        return location1.distance(from: location2)
     }
 }

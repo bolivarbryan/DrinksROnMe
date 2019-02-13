@@ -51,7 +51,7 @@ extension InvitesListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0: return Language.invitedUsers.localized
+        case 0: return Language.invitedUsers.localized + " (\(viewModel.groupedUsers[section].count))"
         case 1: return Language.notInvitedUsers.localized
         default: return nil
         }
