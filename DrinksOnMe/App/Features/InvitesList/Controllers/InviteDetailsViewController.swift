@@ -68,28 +68,12 @@ class InviteDetailsViewController: UIViewController {
         let location = CLLocation(latitude: partyCoordinates.latitude, longitude: partyCoordinates.longitude)
         let userLocation = CLLocation(latitude: user.lat, longitude: user.long)
 
-        let partyAnnotation = PlaceAnnotation(title: "Intercom", coordinate: location.coordinate, subtitle: "")
-        let userAnnotation = PlaceAnnotation(title: user.name, coordinate: userLocation.coordinate, subtitle: "")
+        let partyAnnotation = PlaceAnnotation(title: "Intercom", coordinate: location.coordinate)
+        let userAnnotation = PlaceAnnotation(title: user.name, coordinate: userLocation.coordinate)
 
         mapView.addAnnotation(partyAnnotation)
         mapView.addAnnotation(userAnnotation)
         mapView.showAnnotations([partyAnnotation, userAnnotation], animated: true)
-    }
-
-}
-
-class PlaceAnnotation: NSObject,MKAnnotation {
-
-    var title : String?
-    var subTit : String?
-    var coordinate : CLLocationCoordinate2D
-
-    init(title:String,coordinate : CLLocationCoordinate2D,subtitle:String){
-
-        self.title = title;
-        self.coordinate = coordinate;
-        self.subTit = subtitle;
-
     }
 
 }

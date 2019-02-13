@@ -19,6 +19,7 @@
 		F40DB54922139F5A004E4E82 /* InviteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DB54822139F5A004E4E82 /* InviteDetailsViewController.swift */; };
 		F40DB54C2213A744004E4E82 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DB54B2213A744004E4E82 /* UserTests.swift */; };
 		F4375D542213FC8200757DAB /* IntercomAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4375D532213FC8200757DAB /* IntercomAPIService.swift */; };
+		F4375D57221407B300757DAB /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4375D56221407B300757DAB /* PlaceAnnotation.swift */; };
 		F4B3579A2213041700409014 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B357992213041700409014 /* AppDelegate.swift */; };
 		F4B3579F2213041700409014 /* InvitesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B3579D2213041700409014 /* InvitesList.storyboard */; };
 		F4B357A12213041900409014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B357A02213041900409014 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		F40DB54822139F5A004E4E82 /* InviteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteDetailsViewController.swift; sourceTree = "<group>"; };
 		F40DB54B2213A744004E4E82 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		F4375D532213FC8200757DAB /* IntercomAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntercomAPIService.swift; sourceTree = "<group>"; };
+		F4375D56221407B300757DAB /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		F4B357962213041700409014 /* DrinksOnMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinksOnMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B357992213041700409014 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B3579E2213041700409014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/InvitesList.storyboard; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				F4B3579D2213041700409014 /* InvitesList.storyboard */,
 				F40DB54222139784004E4E82 /* InviteTableViewCell.swift */,
+				F4375D56221407B300757DAB /* PlaceAnnotation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				F40DB53B221395CA004E4E82 /* InvitesListViewModel.swift in Sources */,
 				F4B3579A2213041700409014 /* AppDelegate.swift in Sources */,
 				F4375D542213FC8200757DAB /* IntercomAPIService.swift in Sources */,
+				F4375D57221407B300757DAB /* PlaceAnnotation.swift in Sources */,
 				F40DB54722139EAE004E4E82 /* Language.swift in Sources */,
 				F40DB539221395A9004E4E82 /* InvitesListViewController.swift in Sources */,
 				F40DB54322139784004E4E82 /* InviteTableViewCell.swift in Sources */,
