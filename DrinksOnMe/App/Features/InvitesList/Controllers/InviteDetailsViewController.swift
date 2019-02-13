@@ -67,9 +67,9 @@ class InviteDetailsViewController: UIViewController {
         let partyCoordinates = InvitesListViewModel.partyCoordinates
         let location = CLLocation(latitude: partyCoordinates.latitude, longitude: partyCoordinates.longitude)
         let userLocation = CLLocation(latitude: user.lat, longitude: user.long)
-        
-        let partyAnnotation = MyAnnotation(title: "Intercom", coordinate: location.coordinate, subtitle: "")
-        let userAnnotation = MyAnnotation(title: user.name, coordinate: userLocation.coordinate, subtitle: "")
+
+        let partyAnnotation = PlaceAnnotation(title: "Intercom", coordinate: location.coordinate, subtitle: "")
+        let userAnnotation = PlaceAnnotation(title: user.name, coordinate: userLocation.coordinate, subtitle: "")
 
         mapView.addAnnotation(partyAnnotation)
         mapView.addAnnotation(userAnnotation)
@@ -78,7 +78,7 @@ class InviteDetailsViewController: UIViewController {
 
 }
 
-class MyAnnotation: NSObject,MKAnnotation {
+class PlaceAnnotation: NSObject,MKAnnotation {
 
     var title : String?
     var subTit : String?
