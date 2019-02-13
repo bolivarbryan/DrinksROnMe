@@ -42,7 +42,9 @@ extension InvitesListViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedUser = viewModel.groupedUsers[indexPath.section][indexPath.row]
+        let detailsVC = InviteDetailsViewController(user: selectedUser)
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
