@@ -13,7 +13,7 @@ Small app for implementing Great-circle_distance formula. You can check who can 
 - [x] Use of MVVM Desing pattern
 - [x] Networking layer with Moya and Alamofire
 - [x] Unit Tests for user coordinates
-- [x] Small use of MKMapKit
+- [x] Use of CoreLocation and MapKit Frameworks
 - [x] Codable Protocol
 - [x] Progamatic UI with SnapKit & Storyboards
 - [x] Use of Functional Programming patterns
